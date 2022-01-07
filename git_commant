@@ -1,0 +1,19 @@
+** 깃 연결끊기 **
+git remote remove origin
+
+** .git 파일 삭제 **
+find ./ -name ".git" | xargs rm -Rf
+
+** 레포지토리 신규생성 후 파일 업로드 **
+echo "# Node.js_Textbook" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/RamGod213/Node.js_Textbook.git
+git push -u origin main
+
+git add .
+git commit -m "최초 등록"
+git branch -M main
+git push -u origin main
