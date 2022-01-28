@@ -1,10 +1,10 @@
-** 깃 연결끊기 **
-git remote remove origin
-
-** .git 파일 삭제 **
-find ./ -name ".git" | xargs rm -Rf
+** 깃 신규 설치 후 최초 설정 **
+git config --global user.name "RamG"
+git config --global user.email leejongjjj@naver.com
 
 ** 레포지토리 신규생성 후 파일 업로드 **
+(ex : 레포지토리가 Node.js_Textbook 일 때)
+
 echo "# Node.js_Textbook" >> README.md
 git init
 git add README.md
@@ -15,5 +15,10 @@ git push -u origin main
 
 git add .
 git commit -m "최초 등록"
-git branch -M main
 git push -u origin main
+
+** 깃 연결끊기 **
+git remote remove origin
+
+** .git 파일 삭제 **
+find ./ -name ".git" | xargs rm -Rf
